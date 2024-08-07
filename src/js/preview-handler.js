@@ -1,4 +1,4 @@
-import { thumbnails } from './previes';
+import { thumbnails } from './previews';
 
 // creating preview panel
 const thumbnailsPanel = document.querySelector('.album__thumbnails-panel');
@@ -14,18 +14,10 @@ Object.keys(thumbnails).forEach(function (key) {
 	} else if (thumbnails[key].type === 'vid') {
 		newThumb = vidTemplate.cloneNode(true);
 	} else {
-		console.log(
-			'>>> ' +
-				thumbnails[key].type +
-				': Wrong type for id \'' +
-				thumbnails[key].id +
-				'\'. Must be either \'img\' or \'vid\''
-		);
+		console.log(`>>> ${thumbnails[key].type} : Wrong type for id '${thumbnails[key].id}'. Must be either 'img' or 'vid'`);
 		newThumb = imgTemplate.cloneNode(true);
-		newThumb.querySelector('.album__thumbnail-source').src =
-			'https://fakeimg.pl/350x200/?text=N/A&font=lobster';
+		newThumb.querySelector('.album__thumbnail-source').src = 'https://fakeimg.pl/350x200/?text=N/A&font=lobster';
 		thumbnailsPanel.appendChild(newThumb);
-
 		return;
 	}
 
