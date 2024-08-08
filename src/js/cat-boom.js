@@ -1,18 +1,17 @@
-let cat = document.querySelector('.menu__cat');
+const cat = document.querySelector('.menu__cat');
 const title = document.querySelector('.page-title');
-let x = 80;
-// console.log(cat);
-title.onclick = function () {
-	// if (moveX > 6) moveX = 0.8;
-	console.log('click');
+const album = document.querySelector('.album');
+const wrapper = document.querySelector('.page-wrapper');
+let catWidth = 80;
 
-	x += 40;
-	cat.style.width = x + 'px';
-	cat.style.backgroundSize = x + 'px 110px';
+title.onclick = function () {
+	catWidth += 40;
+	cat.style.width = catWidth + 'px';
+	cat.style.backgroundSize = catWidth + 'px 110px';
 
 	if (cat.offsetWidth > 300) {
-		console.log('BOOM!');
-		document.querySelector('.page-wrapper').classList.add('boom');
+		wrapper.classList.add('boom');
 		cat.style.display = 'none';
+		album.style.zIndex = -1;
 	}
 };

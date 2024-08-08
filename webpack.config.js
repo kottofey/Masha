@@ -6,27 +6,50 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 	context: path.resolve(__dirname, 'src'),
 	mode: 'development',
+
 	entry: {
-		index: ['@babel/polyfill', './js/index.js'],
+		// 'cat-boom': ['@babel/polyfill', './js/cat-boom.js'],
+		// 'preview-handler': ['@babel/polyfill', './js/preview-handler.js'],
+		// 'index': ['@babel/polyfill', './js/index.js'],
+		'index': ['./js/index.js'],
 	},
+
 	output: {
-		filename: './scripts/[name].[contenthash].js',
+		filename: './js/[name]-bundle.js',
 		path: path.resolve(__dirname, 'dist'),
 		clean: true,
 	},
+
 	devtool: 'source-map',
+
 	plugins: [
 		new htmlWebpackPlugin({
 			template: './index.html',
+			favicon: './favicon.ico',
+		}),
+		new htmlWebpackPlugin({
+			filename: './pages/albums.html',
+			template: './pages/albums.html',
+			favicon: './favicon.ico',
+		}),
+		new htmlWebpackPlugin({
+			filename: './pages/about.html',
+			template: './pages/about.html',
+			favicon: './favicon.ico',
+		}),
+		new htmlWebpackPlugin({
+			filename: './pages/contacts.html',
+			template: './pages/contacts.html',
+			favicon: './favicon.ico',
 		}),
 		new MiniCssExtractPlugin({
-			filename: 'styles/masha.css',
+			filename: 'styles/masha.scss',
 		}),
 	],
 	module: {
 		rules: [
 			{
-				test: /\.(?:js|mjs|cjs)$/,
+				test: /\.(?:js|mjs|cjs|ts)$/,
 				include: path.resolve(__dirname, 'src/js'),
 				exclude: /node_modules/,
 				use: {
