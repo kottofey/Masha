@@ -1,0 +1,32 @@
+//@font-face {
+//	font-family: 'TT Lakes';
+//	src: url('../fonts/TTLakes-Regular.eot');
+//	src:
+//		local('TT Lakes Regular'),
+//		local('TTLakes-Regular'),
+//		url('../fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+//		url('../fonts/TTLakes-Regular.woff') format('woff'),
+//		url('../fonts/TTLakes-Regular.ttf') format('truetype');
+//	font-weight: normal;
+//	font-style: normal;
+//}
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('../fonts/Raleway/Raleway-VariableFont_wght.ttf') format('truetype');
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('../fonts/Raleway/Raleway-Italic-VariableFont_wght.ttf') format('truetype');
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Bad Script';
+	src:
+		local('BadScript'),
+		url('../fonts/Bad_Script/BadScript-Regular.ttf') format('truetype');
+	font-style: normal;
+}

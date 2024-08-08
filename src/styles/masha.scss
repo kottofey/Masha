@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
 html {
 	box-sizing: border-box;
 	/*background-color: #442121;*/
@@ -97,64 +95,63 @@ a {
 	display: flex;
 	flex-flow: column;
 	justify-content: space-between;
-	//z-index: -1;
+
+	&__fullsize-vid-wrapper,
+	&__fullsize-img-wrapper {
+		display: flex;
+		height: 310px;
+		max-width: 100%;
+		overflow: hidden;
+		margin: 0 auto;
+	}
+
+	&__fullsize-preview {
+		min-height: 310px;
+		max-height: 100%;
+		max-width: 100%;
+		object-fit: contain;
+	}
+
+	&__fullsize-description {
+		display: flex;
+		margin: 0.8em auto;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		max-width: 100%;
+		min-height: 75px;
+		font-size: 1.3em;
+	}
+
+	&--hidden {
+		display: none;
+	}
 }
 
-.album__fullsize-vid-wrapper,
-.album__fullsize-img-wrapper {
-	display: flex;
-	height: 310px;
-	max-width: 100%;
-	overflow: hidden;
-	margin: 0 auto;
-}
-
-.album__fullsize-preview {
-	min-height: 310px;
-	max-height: 100%;
-	max-width: 100%;
-	object-fit: contain;
-}
-
-.album__fullsize-wrapper--hidden {
-	display: none;
-}
-
-.album__fullsize-description {
-	display: flex;
-	margin: 0.8em auto;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	max-width: 100%;
-	min-height: 75px;
-	font-size: 1.3em;
-}
-
-.album__thumbnails-panel {
+.thumbnails-panel {
 	display: flex;
 	flex-flow: row wrap;
 	max-width: 800px;
 	margin: 0 auto;
 	justify-content: space-around;
-}
 
-.album__thumbnail {
-	height: 75px;
-	width: 75px;
-	border-radius: 30%;
-	object-fit: cover;
-	margin: 5px;
-	transition-property: scale, opacity;
-	transition-duration: 0.15s;
-	transform-origin: center;
-}
+	&__thumbnail {
+		height: 75px;
+		width: 75px;
+		border-radius: 30%;
+		object-fit: cover;
+		margin: 5px;
+		transition-property: scale, opacity;
+		transition-duration: 0.15s;
+		transform-origin: center;
 
-.album__thumbnail:hover,
-.album__thumbnail:focus {
-	scale: 1.1;
-	opacity: 50%;
-	filter: blur(0.5px);
+		&:hover,
+		&:focus {
+			scale: 1.1;
+			opacity: 50%;
+			filter: blur(0.5px);
+		}
+	}
 }
 
 /* Footer */

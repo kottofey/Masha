@@ -8,14 +8,15 @@ module.exports = {
 	mode: 'development',
 
 	entry: {
-		// 'cat-boom': ['@babel/polyfill', './js/cat-boom.js'],
-		// 'preview-handler': ['@babel/polyfill', './js/preview-handler.js'],
-		// 'index': ['@babel/polyfill', './js/index.js'],
-		'index': ['./js/index.js'],
+		'babel': ['@babel/polyfill'],
+		'styles': ['./js/styles.js'],
+		'albums': ['./js/preview-handler'],
+		'cat-boom': ['./js/cat-boom'],
 	},
 
 	output: {
-		filename: './js/[name]-bundle.js',
+		filename: './js/[name]-[contenthash]-bundle.js',
+		chunkFilename: './js/[name]-[contenthash]-chunk-bundle.js',
 		path: path.resolve(__dirname, 'dist'),
 		clean: true,
 	},
@@ -26,24 +27,28 @@ module.exports = {
 		new htmlWebpackPlugin({
 			template: './index.html',
 			favicon: './favicon.ico',
+			chunks: ['styles', 'cat-boom', 'babel'],
 		}),
 		new htmlWebpackPlugin({
 			filename: './pages/albums.html',
 			template: './pages/albums.html',
 			favicon: './favicon.ico',
+			chunks: ['styles', 'albums', 'babel'],
 		}),
 		new htmlWebpackPlugin({
 			filename: './pages/about.html',
 			template: './pages/about.html',
 			favicon: './favicon.ico',
+			chunks: ['styles', 'babel'],
 		}),
 		new htmlWebpackPlugin({
 			filename: './pages/contacts.html',
 			template: './pages/contacts.html',
 			favicon: './favicon.ico',
+			chunks: ['styles', 'cat-boom', 'babel'],
 		}),
 		new MiniCssExtractPlugin({
-			filename: 'styles/masha.scss',
+			filename: './styles/styles.css',
 		}),
 	],
 	module: {
@@ -85,5 +90,9 @@ module.exports = {
 	},
 	devServer: {
 		port: 4200,
+	},
+	performance: {
+		maxEntrypointSize: 512000,
+		maxAssetSize: 512000,
 	},
 };
