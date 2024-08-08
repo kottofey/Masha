@@ -8,7 +8,8 @@
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development --open",
     "predeploy": "npm run build",
-    "deploy": "scp -r ./dist/* kottofey@ub-server:/var/www/html/pm && rmdir /s /q dist"
+    "deploy": "scp -r ./dist/* kottofey@ub-server:/var/www/html/pm && scp -r ./src/images/* kottofey@ub-server:/var/www/html/pm/images",
+    "clean": "rmdir /s /q dist"
   },
   "keywords": [],
   "author": "kottofey <romeokontakt@yandex.ru>",
