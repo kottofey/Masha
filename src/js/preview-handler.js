@@ -15,7 +15,7 @@ Object.keys(thumbnails).forEach((key) => {
 	} else if (thumbnails[key].type === 'vid') {
 		createThumb(vidTemplate.cloneNode(true), thumbnails[key].url, key);
 	} else {
-		console.log(`>>> ${thumbnails[key].type} : Wrong type for id '${thumbnails[key].id}'. Must be either 'img' or 'vid'`);
+		console.log(`>>> ${thumbnails[key].type} : Wrong type for id '${key}'. Must be either 'img' or 'vid'`);
 		createThumb(imgTemplate.cloneNode(true), DUMMY_IMG, key);
 	}
 });
