@@ -1,13 +1,11 @@
 import { defineConfig } from 'vite';
 import { sync } from 'glob';
-import vitePluginFaviconsInject from 'vite-plugin-favicons-inject';
-import eslint from 'vite-plugin-eslint';
 
 export default defineConfig({
 	root: './src',
+	publicDir: './static',
 	build: {
 		outDir: '../dist',
-		// assetsDir: '/asssets',
 		emptyOutDir: true,
 		rollupOptions: {
 			input: sync('./src/**/*.html'.replace(/\\/g, '/')),
@@ -26,5 +24,16 @@ export default defineConfig({
 			},
 		},
 	},
-	plugins: [vitePluginFaviconsInject('./src/favicon/harry_potter.svg')],
+	plugins: [
+		// vitePluginFaviconsInject('./src/favicon/vite-logo.svg', {
+		// 	icons: {
+		// 		firefox: false,
+		// 		appleStartup: false,
+		// 		appleIcon: false,
+		// 		android: false,
+		// 		windows: false,
+		// 		yandex: false,
+		// 	},
+		// }),
+	],
 });
