@@ -1,2 +1,1 @@
-import '../../scss/masha.scss'
-import '../cat-boom.js'
+import '../cat-boom.js';

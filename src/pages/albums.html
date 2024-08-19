@@ -6,7 +6,6 @@
 		<meta content="ie=edge" http-equiv="X-UA-Compatible" />
 		<link href="../favicon/harry_potter.svg" rel="icon" type="image/x-icon" />
 
-		<script src="../js/pages/albums.js" type="module"></script>
 		<title>Сайт Маши | Альбомы</title>
 	</head>
 	<body>
@@ -17,7 +16,8 @@
 			<nav class="menu">
 				<div class="menu__cat"></div>
 				<a class="menu__item" href="../index.html">Главная</a>
-				<a class="menu__item menu__item--active" href="#">Альбомы</a>
+				<a class="menu__item menu__item--active" href="albums.html">Альбомы</a>
+				<a class="menu__item" href="shop.html">Магазин</a>
 				<a class="menu__item" href="about.html">Обо мне</a>
 				<a class="menu__item" href="contacts.html">Контакты</a>
 			</nav>
@@ -45,17 +45,17 @@
 		<!--End of page wrapper-->
 
 		<template id="imgPreview">
-			<div class="album__thumbnail-wrapper">
+			<div class="thumbnails-panel__thumbnail-wrapper">
 				<img alt="" class="thumbnails-panel__thumbnail album__thumbnail-source" src="#" />
 			</div>
 		</template>
 
 		<template id="vidPreview">
-			<div class="album__thumbnail-wrapper">
-				<video class="thumbnails-panel__thumbnail" preload="metadata">
-					<source class="album__thumbnail-source" src="#" type="video/mp4" />
-				</video>
+			<div class="thumbnails-panel__thumbnail-wrapper">
+				<video class="thumbnails-panel__thumbnail album__thumbnail-source" preload="auto" src="#"></video>
 			</div>
 		</template>
+		<script src="../js/pages/albums.js" type="module"></script>
+		<script src="../js/styles.js" type="module"></script>
 	</body>
 </html>

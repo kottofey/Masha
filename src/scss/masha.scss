@@ -1,4 +1,5 @@
-@import "fonts";
+@import 'fonts';
+
 html {
 	box-sizing: border-box;
 }
@@ -145,6 +146,9 @@ a {
 	margin: 0 auto;
 	justify-content: space-around;
 
+	&__thumbnail-wrapper {
+	}
+
 	&__thumbnail {
 		height: 75px;
 		width: 75px;
@@ -166,7 +170,7 @@ a {
 
 .block {
 	&__text {
-		font-family: "Bad Script", Times, serif;
+		font-family: 'Bad Script', Times, serif;
 	}
 }
 

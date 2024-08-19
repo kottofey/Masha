@@ -5,6 +5,7 @@ export default defineConfig({
 	root: './src',
 	publicDir: './static',
 	build: {
+		sourcemap: true,
 		outDir: '../dist',
 		emptyOutDir: true,
 		rollupOptions: {
@@ -24,16 +25,6 @@ export default defineConfig({
 			},
 		},
 	},
-	plugins: [
-		// vitePluginFaviconsInject('./src/favicon/vite-logo.svg', {
-		// 	icons: {
-		// 		firefox: false,
-		// 		appleStartup: false,
-		// 		appleIcon: false,
-		// 		android: false,
-		// 		windows: false,
-		// 		yandex: false,
-		// 	},
-		// }),
-	],
+
+	plugins: [],
 });

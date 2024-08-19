@@ -21,17 +21,17 @@ export const thumbnails = {
 	},
 	'item5': {
 		type: 'vid',
-		url: '/images/5.mp4',
+		url: '/images/5.mp4#t=0.2',
 		desc: 'Апрель апрель звенит капель!',
 	},
 	'item6': {
 		type: 'vid',
-		url: '/images/6.mp4',
+		url: '/images/6.mp4#t=0.2',
 		desc: 'Сердце Чебурашки',
 	},
 	'item7': {
 		type: 'vid',
-		url: '/images/7.mp4',
+		url: '/images/7.mp4#t=0.2',
 		desc: 'Когда захотелось снять про Чебурашку на радужном фоне',
 	},
 	'item8': {
@@ -58,5 +58,10 @@ export const thumbnails = {
 		type: 'img',
 		url: '/images/12.jpg',
 		desc: 'И снова чай!',
+	},
+	'item13': {
+		type: 'img',
+		url: '/images/13.jpg',
+		desc: 'Чай-чай-чай',
 	},
 };

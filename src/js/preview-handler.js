@@ -23,7 +23,7 @@ Object.keys(thumbnails).forEach((key) => {
 /**/
 // Вешаем события по клику на превьюшки
 // Ищем все созданные выше преывьюшки
-const allThumbs = document.querySelectorAll('.album__thumbnail-wrapper');
+const allThumbs = document.querySelectorAll('.thumbnails-panel__thumbnail-wrapper');
 
 allThumbs.forEach(function (thumb) {
 	const id = thumb.querySelector('.thumbnails-panel__thumbnail').id;
