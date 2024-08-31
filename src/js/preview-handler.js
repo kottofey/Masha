@@ -1,4 +1,15 @@
-import { thumbnails } from './previews';
+const thumbnails = await fetch('/previews.json')
+	.then((response) => response.json())
+	.catch((err) => {
+		console.error(`Oops: ${err}`);
+		return {
+			'item1': {
+				'type': 'img',
+				'url': '/images/oops.jpg',
+				'desc': 'Ой...',
+			},
+		};
+	});
 
 const DUMMY_IMG = 'https://fakeimg.pl/350x200/?text=N/A&font=lobster';
 
