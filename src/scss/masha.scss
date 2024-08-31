@@ -23,10 +23,10 @@ a {
 }
 
 .page-wrapper {
-	font-family: "Raleway", Times, sans-serif;
+	font-family: 'Raleway', Times, sans-serif;
 	display: flex;
 	flex-flow: column;
-	width: 85%;
+	width: min(800px, 90%);
 	height: 100vh;
 	margin: 0 auto;
 	background: url('../images/boom.png') no-repeat;
@@ -38,7 +38,6 @@ a {
 	text-align: center;
 	user-select: none;
 	line-height: 1.2em;
-
 }
 
 /* Menu */
@@ -47,6 +46,7 @@ a {
 	display: flex;
 	justify-content: space-around;
 	margin-bottom: 5px;
+	flex-wrap: wrap;
 
 	&__item {
 		font-size: 1em;
@@ -120,6 +120,7 @@ a {
 		max-height: 100%;
 		max-width: 100%;
 		object-fit: contain;
+		border-radius: 15px;
 	}
 
 	&__fullsize-description {
@@ -130,7 +131,7 @@ a {
 		text-align: center;
 		max-width: 100%;
 		min-height: 75px;
-		font-family: "Bad Script", Times, serif;
+		font-family: 'Bad Script', Times, serif;
 		font-size: 1.3em;
 	}
 
