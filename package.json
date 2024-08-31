@@ -26,6 +26,7 @@
     "vite-plugin-favicons-inject": "^2.2.0"
   },
   "dependencies": {
+    "eslint-plugin-json-format": "^2.0.1",
     "normalize.css": "^8.0.1"
   }
 }

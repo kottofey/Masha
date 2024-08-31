@@ -6,6 +6,7 @@ export default defineConfig({
 	publicDir: './static',
 	build: {
 		sourcemap: true,
+		target: 'esnext',
 		outDir: '../dist',
 		emptyOutDir: true,
 		rollupOptions: {
