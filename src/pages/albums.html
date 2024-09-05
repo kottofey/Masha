@@ -1,61 +1,90 @@
 <!doctype html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8" />
-		<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport" />
-		<meta content="ie=edge" http-equiv="X-UA-Compatible" />
-		<link href="../favicon/harry_potter.svg" rel="icon" type="image/x-icon" />
+<head>
+  <meta charset="UTF-8" />
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport" />
+  <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+  <link href="../favicon/harry_potter.svg" rel="icon" type="image/x-icon" />
 
-		<title>Сайт Маши | Альбомы</title>
-	</head>
-	<body>
-		<div class="page-wrapper">
-			<h1 class="page-title">Мои рисунки</h1>
+  <title>Сайт Маши | Альбомы</title>
+</head>
+<body>
+<div class="page-wrapper">
+  <h1 class="page-title">Мои рисунки</h1>
 
-			<!--  Menu  -->
-			<nav class="menu">
-				<div class="menu__cat"></div>
-				<a class="menu__item" href="../index.html">Главная</a>
-				<a class="menu__item menu__item--active" href="albums.html">Альбомы</a>
-				<a class="menu__item" href="shop.html">Магазин</a>
-				<a class="menu__item" href="about.html">Обо мне</a>
-				<a class="menu__item" href="contacts.html">Контакты</a>
-			</nav>
-			<!--  End of Menu -->
+  <!--  Menu  -->
+  <nav class="menu">
+    <div class="menu__cat"></div>
+    <a class="menu__item" href="../index.html">Главная</a>
+    <a class="menu__item menu__item--active" href="albums.html">Альбомы</a>
+    <a class="menu__item" href="shop.html">Магазин</a>
+    <a class="menu__item" href="about.html">Обо мне</a>
+    <a class="menu__item" href="contacts.html">Контакты</a>
+  </nav>
+  <!--  End of Menu -->
 
-			<div class="album">
-				<div class="album__fullsize-vid-wrapper album--hidden">
-					<video autoplay="" class="album__fullsize-preview album__big-vid-source" loop="" muted="" playsinline="" preload="metadata">
-						<source class="" src="#" type="video/mp4" />
-					</video>
-				</div>
+  <div class="album">
+    <div class="album__fullsize-vid-wrapper album--hidden">
+      <video autoplay="" class="album__fullsize-preview album__big-vid-source" loop="" muted="" playsinline="" preload="metadata">
+        <source class="" src="../images/5.mp4" type="video/mp4" />
+      </video>
+    </div>
 
-				<div class="album__fullsize-img-wrapper">
-					<img alt="" class="album__fullsize-preview album__big-pic-source" src="../images/1.jpeg" />
-				</div>
+    <div class="album__fullsize-img-wrapper">
+      <img alt="" class="album__fullsize-preview album__big-pic-source" src="../images/1.jpeg" />
+    </div>
 
-				<p class="album__fullsize-description">Милашная Мяу</p>
+    <p class="album__fullsize-description">Милашная Мяу</p>
 
-				<div class="thumbnails-panel">
-					<!-- панель с превью динамически заполняется из JS	-->
-				</div>
-			</div>
-			<footer class="footer">&copy; Все права защищены! Мяу! <br />2024г</footer>
-		</div>
-		<!--End of page wrapper-->
+    <div class="thumbnails-panel">
+      <!-- панель с превью динамически заполняется из JS	-->
+    </div>
+  </div>
+  <footer class="footer">&copy; Все права защищены! Мяу! <br />2024г</footer>
+</div>
+<!--End of page wrapper-->
 
-		<template id="imgPreview">
-			<div class="thumbnails-panel__thumbnail-wrapper">
-				<img alt="" class="thumbnails-panel__thumbnail album__thumbnail-source" src="#" />
-			</div>
-		</template>
+<template id="imgPreview">
+  <div class="thumbnails-panel__thumbnail-wrapper">
+    <img alt="" class="thumbnails-panel__thumbnail album__thumbnail-source" src="#" />
+  </div>
+</template>
 
-		<template id="vidPreview">
-			<div class="thumbnails-panel__thumbnail-wrapper">
-				<video class="thumbnails-panel__thumbnail album__thumbnail-source" preload="auto" src="#"></video>
-			</div>
-		</template>
-		<script src="../js/styles.js" type="module"></script>
-		<script src="../js/pages/albums.js" type="module"></script>
-	</body>
+<template id="vidPreview">
+  <div class="thumbnails-panel__thumbnail-wrapper">
+    <video class="thumbnails-panel__thumbnail album__thumbnail-source" preload="auto" src="#"></video>
+  </div>
+</template>
+
+<script src="../js/styles.js" type="module"></script>
+<script src="../js/pages/albums.js" type="module"></script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+  (function(m, e, t, r, i, k, a) {
+    m[i] =
+      m[i] ||
+      function() {
+        (m[i].a = m[i].a || []).push(arguments);
+      };
+    m[i].l = 1 * new Date();
+    for (var j = 0; j < document.scripts.length; j++) {
+      if (document.scripts[j].src === r) {
+        return;
+      }
+    }
+    (k = e.createElement(t)), (a = e.getElementsByTagName(t)[0]), (k.async = 1), (k.src = r), a.parentNode.insertBefore(k, a);
+  })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(98044542, "init", {
+    clickmap: true,
+    trackLinks: true,
+    accurateTrackBounce: true,
+    webvisor: true
+  });
+</script>
+<noscript>
+  <div><img alt="" src="https://mc.yandex.ru/watch/98044542" style="position: absolute; left: -9999px" /></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
 </html>
